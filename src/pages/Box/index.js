@@ -29,7 +29,7 @@ export default class Box extends Component {
   };
   subscribeToNewFiles = () => {
     const box = this.props.match.params.id;
-    const io = socket("https://victor-omnistack.herokuapp.com");
+    const io = socket("https://victor-backeend-omnistack.herokuapp.com");
     io.emit("connectRoom", box);
 
     io.on("file", data => {
